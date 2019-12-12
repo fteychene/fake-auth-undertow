@@ -1,0 +1,33 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+
+### OK 200
+GET http://127.0.0.1:8080/project/app/path/nested/for/file
+Authorization: Coucou
+
+### ERR 401
+GET http://127.0.0.1:8080/project/app/path/nested/for/file
+Authorization: Invalid
+
+### ERR 403
+GET http://127.0.0.1:8080/project/app/path/nested/for/file
+Authorization: Forbid
+
+### ERR 404
+GET http://127.0.0.1:8080/
+Authorization: Coucou
+
+###
+GET http://127.0.0.1:8080/project
+Authorization: Coucou
+
+###
+GET http://127.0.0.1:8080/project/app
+Authorization: Coucou
+
+###
